@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6067149127975112241}
-  - component: {fileID: 6067149127975112255}
+  - component: {fileID: 6757785953075945618}
   m_Layer: 0
   m_Name: PivotPoint
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6067149127975112255
+--- !u!114 &6757785953075945618
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6067149127975112242}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 372589d8cfe8f43df9f22aeeee2c7bfb, type: 3}
+  m_Script: {fileID: 11500000, guid: bb4d9c5f89e656c46949f683ee5124b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pointTowardsMouse: 1
@@ -88,8 +88,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6067149128013783357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d112eb7fed94a7283e99aba5ca3002, type: 3}
+  m_Script: {fileID: 11500000, guid: 4dd520a65ca27814db87c55ab19e1188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 5116045146121300871, guid: faa72a3e8d76144bca671eddcb7afb84, type: 3}
-  additionalSpeed: 10
+  projectile: {fileID: 0}
+  additionalSpeed: 0
