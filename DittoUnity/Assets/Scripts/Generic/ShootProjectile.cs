@@ -23,5 +23,6 @@ public class ShootProjectile : MonoBehaviour
         //velocity = 1,0 * (extra speed * flip velocity if facing otherway)
         
         proj.GetComponent<Rigidbody2D>().velocity = transform.right*(transform.parent.transform.localScale.x*additionalSpeed);
+        proj.transform.right = proj.GetComponent<Rigidbody2D>().velocity;
     }
 }
