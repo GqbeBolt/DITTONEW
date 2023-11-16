@@ -9,14 +9,6 @@ public class ShootProjectile : MonoBehaviour
     public GameObject projectile;
     public float additionalSpeed;
 
-    public void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Shoot();
-        }
-    }
-
     public void Shoot()
     {
         GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity);

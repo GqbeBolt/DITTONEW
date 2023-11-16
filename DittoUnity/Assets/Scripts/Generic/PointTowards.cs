@@ -21,6 +21,10 @@ public class PointTowards : MonoBehaviour
     {
         _trans = GetComponent<Transform>();
         _mainCam = Camera.main;
+        if (pointToPlayer)
+        {
+            pointTowardsTrans = GameObject.Find("Player").transform;
+        }
     }
 
     void Update()
