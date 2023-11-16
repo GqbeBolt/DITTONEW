@@ -14,6 +14,9 @@ public class PointTowards : MonoBehaviour
 
     private Camera _mainCam;
 
+    public bool pointToPlayer;
+    public bool DontShootOnMouse;
+
     void Start()
     {
         _trans = GetComponent<Transform>();
