@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2634741231463624454, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4971330440887218449, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
       propertyPath: stopRange
       value: 3
@@ -19,6 +23,10 @@ PrefabInstance:
       propertyPath: viewRange
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 6311878937576372507, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 812394832, guid: 959aec195359c5945bac1fc4f35c41a5, type: 3}
     - target: {fileID: 6376584176424304487, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
       propertyPath: m_Size.x
       value: 1.1386659
