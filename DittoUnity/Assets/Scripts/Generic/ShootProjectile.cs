@@ -9,6 +9,19 @@ public class ShootProjectile : MonoBehaviour
     public GameObject projectile;
     public float additionalSpeed;
 
+    public float cooldown;
+    private float cooldownTimeStamp;
+
+    public void TryShoot()
+    {
+        if (Time.time < cooldownTimeStamp)
+        {
+            return;
+        }
+
+        cooldownTimeStamp = Time.time + cooldown;
+        Shoot();
+    }
     public void Shoot()
     {
         GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity);
