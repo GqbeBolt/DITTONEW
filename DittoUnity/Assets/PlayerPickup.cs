@@ -7,32 +7,15 @@ using UnityEngine;
 
 public class PlayerPickup : MonoBehaviour
 {
-   public float throwStrength;
-   private float throwChargeStart;
-   private float chargeTime;
-   public float maxThrow;
+
 
    public GameObject itemInReach;
    public Transform dropPos;
    public void Update()
    {
-      if (Input.GetMouseButtonDown(1))
+      if (Input.GetKeyDown(KeyCode.E))
       {
-         if (!PickupItem())//if you dont pick up an item than assume player is trying to throw one
-         {
-            chargeTime = 0;
-            throwChargeStart = Time.time;
-         }
-         else
-         {
-            chargeTime = -1;//tell it that you picked up an item
-         }
-      }
-
-      if (Input.GetMouseButtonUp(1) && chargeTime != -1)
-      {
-         chargeTime = Time.time - throwChargeStart;
-         DropItem();
+         PickupItem();
       }
       
 
@@ -41,9 +24,14 @@ public class PlayerPickup : MonoBehaviour
    public bool PickupItem()
    {
       GameObject heldItem = GameObject.FindWithTag("Held Item");
-      if (heldItem || !itemInReach)
+      if (!itemInReach)//if theres nothing in reach
       {
          return false;
+      }
+
+      if (heldItem)//if you have a held item drop it
+      {
+         DropItem();
       }
 
       DroppedItemInformation droppedItemInfoScript = itemInReach.GetComponent<DroppedItemInformation>();
@@ -80,8 +68,7 @@ public class PlayerPickup : MonoBehaviour
 
       HeldItemInformation heldItemInfoScript = heldItem.GetComponent<HeldItemInformation>();
       GameObject droppedItem = Instantiate(heldItemInfoScript.droppedVarient,dropPos.position,transform.rotation);
-      droppedItem.GetComponent<Rigidbody2D>().velocity = transform.right * (throwStrength + Math.Min(chargeTime*maxThrow,maxThrow));
-      droppedItem.GetComponent<Rigidbody2D>().AddTorque(60);
+      droppedItem.GetComponent<Rigidbody2D>().velocity = transform.right;
       droppedItem.GetComponent<DroppedItemInformation>().information = heldItemInfoScript.information;
       Destroy(heldItem);
    }

@@ -8,6 +8,9 @@ TagManager:
   - playerBullet
   - Ground
   - enemyBullet
+  - HeldItem
+  - FloorItem
+  - Held Item
   layers:
   - Default
   - TransparentFX
