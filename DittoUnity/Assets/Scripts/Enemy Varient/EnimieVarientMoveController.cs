@@ -36,6 +36,7 @@ public class EnimieVarientMoveController : MonoBehaviour
         {
             case State.Chase: 
                 Chase();
+                Attack();
                 break;
             case State.Attack:
                 Attack();

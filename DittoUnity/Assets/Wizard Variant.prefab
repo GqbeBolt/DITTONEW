@@ -219,7 +219,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067149128013783355, guid: f06dbb7ab7a43824f876932d562f8f2e, type: 3}
       propertyPath: cooldown
-      value: 1
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067149128013783355, guid: f06dbb7ab7a43824f876932d562f8f2e, type: 3}
+      propertyPath: additionalSpeed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6067149128013783356, guid: f06dbb7ab7a43824f876932d562f8f2e, type: 3}
       propertyPath: m_LocalPosition.x
