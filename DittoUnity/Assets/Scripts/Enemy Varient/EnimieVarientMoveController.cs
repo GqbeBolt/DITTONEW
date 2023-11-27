@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class EnimieVarientMoveController : MonoBehaviour
 {
     private MoveController _moveController;
+    private ShootProjectile shoot;
 
     public float viewRange = 6;
     public float stopRange = 3;
@@ -27,6 +27,7 @@ public class EnimieVarientMoveController : MonoBehaviour
     {
         _moveController = GetComponent<MoveController>();
         _startPos = transform.position;
+        shoot = GetComponentInChildren<ShootProjectile>();
     }
 
     public void FixedUpdate()
@@ -35,6 +36,7 @@ public class EnimieVarientMoveController : MonoBehaviour
         {
             case State.Chase: 
                 Chase();
+                Attack();
                 break;
             case State.Attack:
                 Attack();
@@ -48,12 +50,15 @@ public class EnimieVarientMoveController : MonoBehaviour
 
     public void Attack()
     {
+        shoot.TryShoot();
         if (Vector3.Distance(transform.position, _chasing.position) > stopRange)
         {
             currentState = State.Chase;
             return;
         }
     }
+
+
 
     public void Chase()
     {
