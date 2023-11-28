@@ -71,9 +71,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2230957341813629461}
   - component: {fileID: 1661650796173429942}
+  - component: {fileID: 5024926598717328021}
   m_Layer: 0
   m_Name: PlayerBow
-  m_TagString: Untagged
+  m_TagString: Held Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,6 +111,20 @@ MonoBehaviour:
   pointTowardsTrans: {fileID: 0}
   pointToPlayer: 0
   DontShootOnMouse: 0
+--- !u!114 &5024926598717328021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2230957341813629462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98dd85532bb7a64a84a74db6761dcf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedVarient: {fileID: 6326270781554350600, guid: 69bf8bf6848bcf44da68226e46829ba4, type: 3}
+  information: []
 --- !u!1 &5388315187354430260
 GameObject:
   m_ObjectHideFlags: 0
