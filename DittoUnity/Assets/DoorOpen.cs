@@ -29,7 +29,7 @@ public class DoorOpen : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D other)
     {
-        if (open && other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (open && other.gameObject.CompareTag("Player") && Input.GetKey(KeyCode.E))
         {
             Debug.Log("Yay");
         }
