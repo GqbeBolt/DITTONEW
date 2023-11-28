@@ -362,11 +362,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.669339
+      value: -68.07
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.95143795
+      value: -44.52
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -530,11 +530,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.091216
+      value: -90.83056
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.17563224
+      value: -43.39293
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -587,11 +587,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.6767
+      value: -64.06264
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.0632834
+      value: -27.275278
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -644,11 +644,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.57187
+      value: -97.31121
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1774724
+      value: -33.16109
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -701,11 +701,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.348904
+      value: -72.39044
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5168133
+      value: -46.085373
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -869,11 +869,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.3173437
+      value: -85.05669
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.94
+      value: -46.50856
       objectReference: {fileID: 0}
     - target: {fileID: 7245795602844424166, guid: 1e5ea47e69360f14b94298eeb6b27ee1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1021,31 +1021,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4107727224444260711, guid: fa371b10d24f46c4487d57cf979abee9, type: 3}
+      propertyPath: droppedVarient
+      value: 
+      objectReference: {fileID: 6602251589865071124}
     - target: {fileID: 7081989415905475044, guid: fa371b10d24f46c4487d57cf979abee9, type: 3}
       propertyPath: m_TagString
       value: Held Item
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa371b10d24f46c4487d57cf979abee9, type: 3}
---- !u!1 &3925608521310649959 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7081989415905475044, guid: fa371b10d24f46c4487d57cf979abee9, type: 3}
-  m_PrefabInstance: {fileID: 3925608521310649958}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3925608521310649960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3925608521310649959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d98dd85532bb7a64a84a74db6761dcf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  droppedVarient: {fileID: 6602251589865071124}
-  information: []
 --- !u!1001 &6602251589865071123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1112,29 +1097,3 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6326270781554350600, guid: 69bf8bf6848bcf44da68226e46829ba4, type: 3}
   m_PrefabInstance: {fileID: 6602251589865071123}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &6602251589865071128
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6602251589865071124}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.21133333}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
