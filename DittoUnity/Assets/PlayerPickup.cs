@@ -15,7 +15,10 @@ public class PlayerPickup : MonoBehaviour
    {
       if (Input.GetKeyDown(KeyCode.E))
       {
-         PickupItem();
+         if (!PickupItem())
+         {
+            DropItem();
+         }
       }
       
 
