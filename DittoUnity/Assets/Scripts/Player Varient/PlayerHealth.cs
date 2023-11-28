@@ -18,10 +18,9 @@ public class PlayerHealth : MonoBehaviour
         health = maxHealth;
         currentSceneName = SceneManager.GetActiveScene().name;
     }
-
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.CompareTag("enemyBullet"))
+        if (other.gameObject.CompareTag("enemyBullet"))
         {
             health--;
             if (health <= 0)

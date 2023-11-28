@@ -17,9 +17,9 @@ public class EnemyHealthAndHurt : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.CompareTag("playerBullet"))
+        if (other.gameObject.CompareTag("playerBullet"))
         {
             health--;
             _animator.Play("HurtAnim");

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8784130144141052145}
   - component: {fileID: 118517497722866764}
   - component: {fileID: 471700319116646891}
-  - component: {fileID: 3957304333168112865}
+  - component: {fileID: 4480492264903480057}
   m_Layer: 0
-  m_Name: DroppedBow
+  m_Name: DroppedStaff
   m_TagString: FloorItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 850e730110788ab49aa609651c639066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heldVarient: {fileID: 2230957341813629462, guid: a03dbfbbb692e4347a99001d34eeb984, type: 3}
+  heldVarient: {fileID: 2230957341813629462, guid: 91d5f6c6de1534946a3e575f85f7032b, type: 3}
   information: []
 --- !u!50 &471700319116646891
 Rigidbody2D:
@@ -70,7 +70,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &3957304333168112865
+--- !u!58 &4480492264903480057
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,9 +159,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1546680524, guid: 44815c1de05b4764e866c7cf8925660b, type: 3}
+  m_Sprite: {fileID: -2133814412, guid: 959aec195359c5945bac1fc4f35c41a5, type: 3}
   m_Color: {r: 0.990566, g: 0.8379316, b: 0.8379316, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}

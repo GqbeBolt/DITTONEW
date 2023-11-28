@@ -46,9 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd520a65ca27814db87c55ab19e1188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 5116045146121300871, guid: fb2fc44d5f0edf34fab4ec0f67a031e2, type: 3}
-  additionalSpeed: 24
-  cooldown: 0.2
+  projectile: {fileID: 5116045146121300871, guid: 854719cce079ec341975e7eeef86e9ca, type: 3}
+  additionalSpeed: 12
+  cooldown: 0.3
 --- !u!114 &2190708580442115740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 1661650796173429942}
   - component: {fileID: 5024926598717328021}
   m_Layer: 0
-  m_Name: PlayerBow
+  m_Name: Player Staff
   m_TagString: Held Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98dd85532bb7a64a84a74db6761dcf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  droppedVarient: {fileID: 6326270781554350600, guid: 707e73b0fd9769f4dbcba5f6f983ad3f, type: 3}
+  droppedVarient: {fileID: 6326270781554350600, guid: 0558215699777e54dbddccef5c102273, type: 3}
   information: []
 --- !u!1 &5388315187354430260
 GameObject:
@@ -198,7 +198,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1546680524, guid: 44815c1de05b4764e866c7cf8925660b, type: 3}
+  m_Sprite: {fileID: -2133814412, guid: 959aec195359c5945bac1fc4f35c41a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0

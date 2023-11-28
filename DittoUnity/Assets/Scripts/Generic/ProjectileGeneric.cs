@@ -26,11 +26,11 @@ public class ProjectileGeneric : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnCollisionEnter2D(Collision2D other)
     {
         foreach (string tag in breakTags)
         {
-            if(other.CompareTag(tag)){
+            if(other.gameObject.CompareTag(tag)){
                 if (stickOnHit)
                 {
                     Destroy(GetComponent<Rigidbody2D>());
