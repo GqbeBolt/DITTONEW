@@ -36,6 +36,7 @@ public class ProjectileGeneric : MonoBehaviour
                     Destroy(GetComponent<Rigidbody2D>());
                     Destroy(GetComponent<Collider2D>());
                     transform.parent = other.transform;
+                    Debug.Log(other.gameObject.name);
                 }
                 else
                 {
