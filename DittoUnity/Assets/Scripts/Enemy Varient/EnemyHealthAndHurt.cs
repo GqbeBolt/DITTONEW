@@ -29,4 +29,16 @@ public class EnemyHealthAndHurt : MonoBehaviour
             }
         }
     }
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("playerBullet"))
+        {
+            health--;
+            _animator.Play("HurtAnim");
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 }
