@@ -11,6 +11,7 @@ TagManager:
   - HeldItem
   - FloorItem
   - Held Item
+  - spikes
   layers:
   - Default
   - TransparentFX
