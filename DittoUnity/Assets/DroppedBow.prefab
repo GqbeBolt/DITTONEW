@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 118517497722866764}
   - component: {fileID: 471700319116646891}
   - component: {fileID: 3957304333168112865}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DroppedBow
   m_TagString: FloorItem
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1546680524, guid: 44815c1de05b4764e866c7cf8925660b, type: 3}
   m_Color: {r: 0.990566, g: 0.8379316, b: 0.8379316, a: 1}
   m_FlipX: 0
