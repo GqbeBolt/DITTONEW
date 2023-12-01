@@ -36,13 +36,16 @@ public class EnimieVarientMoveController : MonoBehaviour
         {
             case State.Chase: 
                 Chase();
+                Debug.Log("CHASE");
                 Attack();
                 break;
             case State.Attack:
                 Attack();
+                Debug.Log("ATTACK");
                 break;
             case State.Search: 
                 Search();
+                Debug.Log("SEARCH");
                 break;
             
         }
@@ -82,6 +85,7 @@ public class EnimieVarientMoveController : MonoBehaviour
         {
             _chasing = hit.transform;
             currentState = State.Chase;
+            Debug.Log("PELAESE");
         }
         else
         {
