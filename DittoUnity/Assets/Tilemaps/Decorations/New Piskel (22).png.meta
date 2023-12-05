@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4ac2cea2eb899fd41a9ca25a90f4f92b
+guid: 8970ac9cbb95a1544b11570add3070e0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Vines_0
+      name: New Piskel (22)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92f8a4bbce076a54594e67e378dffdd8
-      internalID: -1160492297
+      spriteID: 96035fa8fb313d848bff5bd5f97ae3a9
+      internalID: -1188139123
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Vines_0: -1160492297
+      New Piskel (22)_0: -1188139123
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
