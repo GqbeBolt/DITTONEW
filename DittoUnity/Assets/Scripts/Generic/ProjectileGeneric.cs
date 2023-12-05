@@ -28,20 +28,30 @@ public class ProjectileGeneric : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D other)
     {
+        Debug.Log("I am: " + gameObject.GetInstanceID());
+        Debug.Log("I hit: " + other.gameObject.GetInstanceID());
         foreach (string tag in breakTags)
         {
+            Debug.Log("Checking tag: " + tag);
+            Debug.Log("Other is: " + other.gameObject.name);
             if(other.gameObject.CompareTag(tag)){
+                Debug.Log("Hit tag: " + tag);
+                Debug.Log("Other is: " + other.gameObject.name);
                 if (stickOnHit)
                 {
+                    Debug.Log("Stick on hit");
+                    Debug.Log("Other is: " + other.gameObject.name);
+                    transform.SetParent(other.transform);
                     Destroy(GetComponent<Rigidbody2D>());
                     Destroy(GetComponent<Collider2D>());
-                    transform.parent = other.transform;
-                    Debug.Log(other.gameObject.name);
+                    Debug.Log("Parent is: " + transform.parent.name);
+                    break;
                 }
                 else
                 {
                     Destroy(gameObject);
                 }
+                Debug.Log("Loop is still running");
             }
         }
 
