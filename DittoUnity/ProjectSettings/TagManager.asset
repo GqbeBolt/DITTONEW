@@ -12,6 +12,7 @@ TagManager:
   - FloorItem
   - Held Item
   - spikes
+  - Ladder
   layers:
   - Default
   - TransparentFX

@@ -5,9 +5,11 @@ using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public Image healthBar;
     public float maxHealth;
     public float health;
     private Animator _animator;
@@ -42,6 +44,8 @@ public class PlayerHealth : MonoBehaviour
             cooldownTimeStamp = Time.time + cooldown;
             Damage(1);
         }
+        
+        healthBar.fillAmount = health / maxHealth;
     }
 
     public void OnCollisionEnter2D(Collision2D other)
