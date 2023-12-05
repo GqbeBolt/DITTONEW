@@ -12,18 +12,11 @@ public class EnemyHealthAndHurt : MonoBehaviour
     public float health;
     private Animator _animator;
     [SerializeField] private Slider slider;
-    [SerializeField] private Camera camera;
 
     public void Start()
     {
         health = maxHealth;
         _animator = GetComponent<Animator>();
-        camera = 
-    }
-
-    public void FixedUpdate()
-    {
-        slider.transform.rotation = camera.transform.rotation;
     }
 
     public void OnCollisionEnter2D(Collision2D other)
