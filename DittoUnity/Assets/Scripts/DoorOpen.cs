@@ -33,14 +33,8 @@ public class DoorOpen : MonoBehaviour
         if (open && other.gameObject.CompareTag("Player") && Input.GetKey(KeyCode.W))
         {
             levelNum++;
-            try
-            {
-                SceneManager.LoadScene("Level" + levelNum);
-            }
-            catch (Exception e)
-            {
-                
-            }
+            Debug.Log(levelNum);
+            SceneManager.LoadScene("Level" + levelNum/2);
             
         }
     }
