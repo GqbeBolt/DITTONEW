@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2634741231463624454, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4971330440887218449, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
       propertyPath: stopRange
@@ -219,7 +219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067149128013783355, guid: f06dbb7ab7a43824f876932d562f8f2e, type: 3}
       propertyPath: cooldown
-      value: 0.7
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 6067149128013783355, guid: f06dbb7ab7a43824f876932d562f8f2e, type: 3}
       propertyPath: additionalSpeed
