@@ -23,14 +23,30 @@ public class EnemyHealthAndHurt : MonoBehaviour
     {
         if (other.gameObject.CompareTag("playerBullet"))
         {
-            Damage(1f);
+            if(other.gameObject.name == "Player Fireball")
+            {
+                Damage(3f);
+            } else
+            {
+                Damage(1f);
+            }
+            Debug.Log("E");
+            
         }
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("playerBullet"))
         {
-            Damage(1f);
+            if (other.gameObject.name == "AreaDamage(Clone)")
+            {
+                Damage(3f);
+            }
+            else
+            {
+                Damage(1f);
+            }
+            Debug.Log(other.gameObject.name);
         }
     }
 
