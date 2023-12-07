@@ -19,11 +19,14 @@ public class MoveController : MonoBehaviour
     public float rayDistance = 1.4f;
     public int jumpNumber;
     private int _jumpCounter;
+    public GameObject spriteObject;
+    private SpriteRenderer _spriteRenderer;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _spriteRenderer = spriteObject.GetComponent<SpriteRenderer>();
     }
-    
+
     void FixedUpdate()
     {
         //set movement
@@ -60,6 +63,19 @@ public class MoveController : MonoBehaviour
         {
             _requestedSlowdown = false;
         }
+        Debug.Log(_rb.velocity.x);
+        if (_rb.velocity.x < 2)
+        {
+            _spriteRenderer.flipX = true;
+           
+        }        
+        if (_rb.velocity.x > -2)
+        {
+            _spriteRenderer.flipX = false;
+           
+        }
+
+
     }
 
     private bool IsGrounded()

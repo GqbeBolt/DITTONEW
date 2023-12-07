@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2634741231463624454, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4971330440887218449, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
       propertyPath: stopRange
@@ -71,6 +71,10 @@ PrefabInstance:
       propertyPath: rayDistance
       value: 1.3
       objectReference: {fileID: 0}
+    - target: {fileID: 6931102052490711857, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
+      propertyPath: spriteObject
+      value: 
+      objectReference: {fileID: 6043183239440762566}
     - target: {fileID: 7209124428371569395, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
       propertyPath: m_Name
       value: Archer
@@ -145,6 +149,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
+--- !u!1 &6043183239440762566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6005686367168412629, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
+  m_PrefabInstance: {fileID: 37656955368291603}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7245795602844424166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7209124428371569397, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
