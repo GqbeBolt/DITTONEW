@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorOpen : MonoBehaviour
 {
     public bool open;
-
+	private static int levelNum = 0;
     private SpriteRenderer sr;
 
     [SerializeField] Sprite openSprite;
@@ -31,7 +32,7 @@ public class DoorOpen : MonoBehaviour
     {
         if (open && other.gameObject.CompareTag("Player") && Input.GetKey(KeyCode.W))
         {
-            Debug.Log("Yay");
+            SceneManager.LoadScene("Level" + levelNum);
         }
     }
 }
