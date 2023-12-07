@@ -63,7 +63,6 @@ public class MoveController : MonoBehaviour
         {
             _requestedSlowdown = false;
         }
-        Debug.Log(_rb.velocity.x);
         if (_rb.velocity.x < 2)
         {
             _spriteRenderer.flipX = true;
