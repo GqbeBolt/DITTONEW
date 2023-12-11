@@ -527,6 +527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathParticle: {fileID: 5705020734078015136, guid: 8123da762ff44d546a10193b6b199d39, type: 3}
+  chance: 50
 --- !u!1 &8239683759663660826
 GameObject:
   m_ObjectHideFlags: 0

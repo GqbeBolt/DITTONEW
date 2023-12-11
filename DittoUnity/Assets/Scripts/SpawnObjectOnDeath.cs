@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnObjectOnDeath : MonoBehaviour
 {
     public GameObject deathParticle;
+    public int chance = 100;
     
     private bool isQuitting = false;
 
@@ -15,7 +16,7 @@ public class SpawnObjectOnDeath : MonoBehaviour
 
     public void OnDestroy(){
         
-        if (!isQuitting)
+        if (!isQuitting && Random.Range(1, 100) < chance)
         {
             Instantiate(deathParticle, transform.position, Quaternion.identity);
         }
