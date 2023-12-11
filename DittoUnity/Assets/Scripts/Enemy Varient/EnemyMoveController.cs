@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnimieVarientMoveController : MonoBehaviour
+public class EnemyMoveController : MonoBehaviour
 {
     private MoveController _moveController;
     private ShootProjectile shoot;
+    private Rigidbody2D rb;
 
     public float viewRange = 6;
     public float stopRange = 3;
@@ -28,6 +29,7 @@ public class EnimieVarientMoveController : MonoBehaviour
         _moveController = GetComponent<MoveController>();
         _startPos = transform.position;
         shoot = GetComponentInChildren<ShootProjectile>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public void FixedUpdate()
@@ -73,12 +75,13 @@ public class EnimieVarientMoveController : MonoBehaviour
             currentState = State.Search;
             return;
         }
+
     }
 
     public void Search()
     {
         RaycastHit2D hit = Physics2D.CircleCast(transform.position,viewRange,Vector2.zero,1,layerMask,-10,10);
-        if (hit)//if you find someone
+        if (hit)
         {
             _chasing = hit.transform;
             currentState = State.Chase;
@@ -87,6 +90,8 @@ public class EnimieVarientMoveController : MonoBehaviour
         {
             MoveTowards(_startPos, stopRange +1);
         }
+
+        
 
 
     }

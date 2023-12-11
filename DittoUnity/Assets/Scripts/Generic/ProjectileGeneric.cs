@@ -26,7 +26,7 @@ public class ProjectileGeneric : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
 
         foreach (string tag in breakTags)
@@ -48,6 +48,7 @@ public class ProjectileGeneric : MonoBehaviour
                 else
                 {
                     Destroy(gameObject);
+                    Debug.Log("destroy");
                 }
             }
         }

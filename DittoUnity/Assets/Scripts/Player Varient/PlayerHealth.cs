@@ -18,13 +18,16 @@ public class PlayerHealth : MonoBehaviour
     public float cooldown;
     private float cooldownTimeStamp;
 
-    private Boolean touchingHazard;
+    private bool touchingHazard;
+    [SerializeField] private GameObject pickUpRange;
+    private Collider2D pickUpCollider;
 
     public void Start()
     {
         touchingHazard = false;
         health = maxHealth;
         currentSceneName = SceneManager.GetActiveScene().name;
+        pickUpCollider = pickUpRange.GetComponent<Collider2D>();
     }
 
     public void FixedUpdate()
@@ -33,6 +36,7 @@ public class PlayerHealth : MonoBehaviour
         {
             SceneManager.LoadScene(currentSceneName);
         }
+        
         
         if (touchingHazard)
         {
@@ -48,13 +52,17 @@ public class PlayerHealth : MonoBehaviour
         healthBar.fillAmount = health / maxHealth;
     }
 
-    public void OnCollisionEnter2D(Collision2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("enemyBullet"))
         {
             Damage(1);
         }
+    }
 
+
+    public void OnCollisionEnter2D(Collision2D other)
+    {
         if (other.gameObject.CompareTag("spikes"))
         {
             touchingHazard = true;
@@ -73,5 +81,14 @@ public class PlayerHealth : MonoBehaviour
     public void Damage(int amount)
     {
         health -= amount;
+    }
+
+    public void Heal(int amount)
+    {
+        health += amount;
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
     }
 }

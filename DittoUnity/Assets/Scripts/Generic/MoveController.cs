@@ -11,6 +11,9 @@ public class MoveController : MonoBehaviour
     private Vector2 _currentInput;
     private bool _requestedJump;
     private bool _requestedSlowdown;
+    private bool onGround;
+    private bool jumpedOff;
+    [SerializeField] private bool faceOtherDirection;
 
     public LayerMask groundLayer;
 
@@ -18,7 +21,7 @@ public class MoveController : MonoBehaviour
     public float jumpPower = 15;//gravity 4
     public float rayDistance = 1.4f;
     public int jumpNumber;
-    private int _jumpCounter;
+    public int _jumpCounter;
     public GameObject spriteObject;
     private SpriteRenderer _spriteRenderer;
     void Start()
@@ -31,7 +34,7 @@ public class MoveController : MonoBehaviour
     {
         //set movement
         _rb.velocity = new Vector2(_currentInput.x * speed, _rb.velocity.y); //dont change y velocity
-
+        /*
         if (_requestedJump && (IsGrounded() || _jumpCounter > 0))
         {
             if (IsGrounded())
@@ -53,6 +56,36 @@ public class MoveController : MonoBehaviour
         {
             _requestedJump = false;
         }
+        */
+        onGround = IsGrounded();
+
+        if (onGround)
+        {
+            _jumpCounter = jumpNumber;
+            jumpedOff = false;
+        }
+
+        if (_requestedJump)
+        {
+            if (onGround)
+            {
+                Jump();
+            } else if (_jumpCounter > 0)
+            {
+                Jump();
+                _jumpCounter--;
+            } else
+            {
+                _requestedJump = false;
+            }
+        } 
+        
+        
+        if (!onGround && !jumpedOff)
+        {
+            _jumpCounter = jumpNumber - 1;
+            jumpedOff = true;
+        }
 
         if (_requestedSlowdown && _rb.velocity.y > 0)//variable jump height
         {
@@ -63,14 +96,29 @@ public class MoveController : MonoBehaviour
         {
             _requestedSlowdown = false;
         }
-        if (_rb.velocity.x < 2)
+        //flipping sprite
+        if (_rb.velocity.x > 0.1)
         {
-            _spriteRenderer.flipX = true;
+            if (faceOtherDirection)
+            {
+                _spriteRenderer.flipX = true;
+            } else
+            {
+                _spriteRenderer.flipX = false;
+            }
+            
            
         }        
-        if (_rb.velocity.x > -2)
+        if (_rb.velocity.x < -0.1)
         {
-            _spriteRenderer.flipX = false;
+            if (faceOtherDirection)
+            {
+                _spriteRenderer.flipX = false;
+            }
+            else
+            {
+                _spriteRenderer.flipX = true;
+            };
            
         }
 
@@ -93,18 +141,15 @@ public class MoveController : MonoBehaviour
         _requestedJump = true;
     }
 
+    public void Jump()
+    {
+        _rb.velocity *= Vector2.right;
+        _rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+        _requestedJump = false;
+    }
+
     public void RequestSlowdown()
     {
         _requestedSlowdown = true;
     }
-    //to do at mvhs:
-    /*
-     *  add landing animation
-     *  add sprites
-     *  fricitonless character collider
-     *  
-     *
-     * 
-     */
-    
 }

@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 7209124428371569400}
   - component: {fileID: 6376584176424304487}
   - component: {fileID: 3040136096100713815}
+  - component: {fileID: 8542531142003219356}
   m_Layer: 7
   m_Name: BaseEnemy
   m_TagString: enemy
@@ -423,7 +424,6 @@ MonoBehaviour:
   maxHealth: 3
   health: 0
   slider: {fileID: 8271921071909259111}
-  camera: {fileID: 0}
 --- !u!114 &6931102052490711857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,6 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6941f8a1705f7454ca5d84c7e314dcb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  faceOtherDirection: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -443,6 +444,8 @@ MonoBehaviour:
   jumpPower: 15
   rayDistance: 1.4
   jumpNumber: 0
+  _jumpCounter: 0
+  spriteObject: {fileID: 0}
 --- !u!50 &7209124428371569400
 Rigidbody2D:
   serializedVersion: 4
@@ -511,6 +514,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8542531142003219356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7209124428371569395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6155879a43a8f594b875a83f814e4b25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticle: {fileID: 5705020734078015136, guid: 8123da762ff44d546a10193b6b199d39, type: 3}
 --- !u!1 &8239683759663660826
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,10 +8,10 @@ using UnityEngine.SceneManagement;
 public class DoorOpen : MonoBehaviour
 {
     public bool open;
-	private static int levelNum = 1;
     private SpriteRenderer sr;
 
     [SerializeField] Sprite openSprite;
+    [SerializeField] string nextScene;
     // Update is called once per frame
 
     void Start()
@@ -32,8 +32,7 @@ public class DoorOpen : MonoBehaviour
     {
         if (open && other.gameObject.CompareTag("Player") && Input.GetKey(KeyCode.W))
         {
-            levelNum++;
-            SceneManager.LoadScene("Level" + levelNum);
+            SceneManager.LoadScene(nextScene);
         }
     }
 }

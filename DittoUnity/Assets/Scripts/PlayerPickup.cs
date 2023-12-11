@@ -11,7 +11,14 @@ public class PlayerPickup : MonoBehaviour
 
    public GameObject itemInReach;
    public Transform dropPos;
-   public void Update()
+    private PlayerHealth healthController;
+
+    private void Start()
+    {
+        healthController = transform.parent.GetComponent<PlayerHealth>();
+        
+    }
+    public void Update()
    {
       if (Input.GetKeyDown(KeyCode.E))
       {
@@ -39,7 +46,7 @@ public class PlayerPickup : MonoBehaviour
 
       DroppedItemInformation droppedItemInfoScript = itemInReach.GetComponent<DroppedItemInformation>();
       GameObject pickupPrefab = droppedItemInfoScript.heldVarient;
-      GameObject newHeldItem = Instantiate(pickupPrefab, transform.GetChild(0));
+      GameObject newHeldItem = Instantiate(pickupPrefab, transform.parent.GetChild(0));
       newHeldItem.GetComponent<HeldItemInformation>().information = droppedItemInfoScript.information;
       Destroy(itemInReach);
       return true;
@@ -50,7 +57,11 @@ public class PlayerPickup : MonoBehaviour
       if (other.CompareTag("FloorItem"))
       {
          itemInReach = other.gameObject;
-      }
+      } else if (other.CompareTag("HealthPack"))
+       {
+            healthController.Heal(1);
+            Destroy(other.gameObject);
+       }
    }
 
    public void OnTriggerExit2D(Collider2D other)
