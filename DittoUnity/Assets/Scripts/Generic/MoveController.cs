@@ -89,7 +89,7 @@ public class MoveController : MonoBehaviour
 
         if (_requestedSlowdown && _rb.velocity.y > 0)//variable jump height
         {
-            _rb.velocity /= new Vector2(1, 2);
+            _rb.velocity /= new Vector2(1, 1.3f);
             _requestedSlowdown = false;
         }
         else if (_requestedSlowdown)
