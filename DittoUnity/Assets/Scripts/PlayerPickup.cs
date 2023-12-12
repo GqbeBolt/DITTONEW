@@ -53,13 +53,13 @@ public class PlayerPickup : MonoBehaviour
       Destroy(itemInReach);
       switch (newHeldItem.name)
       {
-         case "PlayerBow":
+         case "PlayerBow(Clone)":
             PlayerPrefs.SetInt("PlayerHolding", 0);
             break;
-         case "PlayerStaff":
+         case "Player Staff(Clone)":
             PlayerPrefs.SetInt("PlayerHolding", 1);
             break;
-         case "PlayerSword":
+         case "PlayerSword(Clone)":
             PlayerPrefs.SetInt("PlayerHolding", 2);
             break;
       }
