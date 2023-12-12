@@ -12,10 +12,12 @@ public class PlayerPickup : MonoBehaviour
    public GameObject itemInReach;
    public Transform dropPos;
     private PlayerHealth healthController;
+    public GameObject[] weapons;
 
     private void Start()
     {
         healthController = transform.parent.GetComponent<PlayerHealth>();
+        GameObject newHeldItem = Instantiate(weapons[PlayerPrefs.GetInt("PlayerHolding")], transform.parent.GetChild(0));
         
     }
     public void Update()
@@ -49,6 +51,20 @@ public class PlayerPickup : MonoBehaviour
       GameObject newHeldItem = Instantiate(pickupPrefab, transform.parent.GetChild(0));
       newHeldItem.GetComponent<HeldItemInformation>().information = droppedItemInfoScript.information;
       Destroy(itemInReach);
+      switch (newHeldItem.name)
+      {
+         case "PlayerBow":
+            PlayerPrefs.SetInt("PlayerHolding", 0);
+            break;
+         case "PlayerStaff":
+            PlayerPrefs.SetInt("PlayerHolding", 1);
+            break;
+         case "PlayerSword":
+            PlayerPrefs.SetInt("PlayerHolding", 2);
+            break;
+      }
+
+      
       return true;
    }
 
