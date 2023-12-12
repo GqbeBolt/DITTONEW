@@ -73,6 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemInReach: {fileID: 0}
   dropPos: {fileID: 2124580601732434971}
+  weapons: []
 --- !u!1 &2999326219852318057
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +162,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   maxHealth: 10
   health: 0
-  cooldown: 0
+  cooldown: 1
   pickUpRange: {fileID: 815847214}
 --- !u!114 &3925608521695107494
 MonoBehaviour:
@@ -565,7 +566,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: b8be76d0c29f4674e9b5bb98f8e5a9ef, type: 3}
   m_Color: {r: 0.7216981, g: 1, b: 0.8854051, a: 1}
   m_FlipX: 0
