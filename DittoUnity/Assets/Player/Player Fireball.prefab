@@ -67,6 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathParticle: {fileID: 8101265760608142853, guid: ed2221caba784cc4896034250241cf43, type: 3}
+  chance: 100
 --- !u!50 &4100408564924704468
 Rigidbody2D:
   serializedVersion: 4
