@@ -16,7 +16,7 @@ public class SpawnObjectOnDeath : MonoBehaviour
 
     public void OnDestroy(){
         
-        if (!isQuitting && Random.Range(1, 100) < chance)
+        if (!isQuitting && Random.Range(1, 100) <= chance)
         {
             Instantiate(deathParticle, transform.position, Quaternion.identity);
         }
