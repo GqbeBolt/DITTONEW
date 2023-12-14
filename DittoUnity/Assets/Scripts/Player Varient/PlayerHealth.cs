@@ -21,6 +21,8 @@ public class PlayerHealth : MonoBehaviour
     private bool touchingHazard;
     [SerializeField] private GameObject pickUpRange;
     private Collider2D pickUpCollider;
+    public GameObject deathScreen;
+    public GameObject canvasForDeath;
 
     public void Start()
     {
@@ -33,11 +35,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void FixedUpdate()
     {
-        if (health <= 0)
-        {
-            SceneManager.LoadScene(currentSceneName);
-        }
-        
         
         if (touchingHazard)
         {
@@ -83,6 +80,12 @@ public class PlayerHealth : MonoBehaviour
     {
         health -= amount;
         PlayerPrefs.SetFloat("PlayerHealth", health);
+        if (health <= 0)
+        {
+            Instantiate(deathScreen);
+            
+            health = 1000;
+        }
     }
 
     public void Heal(int amount)

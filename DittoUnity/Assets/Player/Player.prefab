@@ -169,6 +169,8 @@ MonoBehaviour:
   health: 0
   cooldown: 1
   pickUpRange: {fileID: 815847214}
+  deathScreen: {fileID: 2313826276835566853, guid: 396730f2d0d8ad9458ce796729a71f01, type: 3}
+  canvasForDeath: {fileID: 8043556586675567015}
 --- !u!114 &3925608521695107494
 MonoBehaviour:
   m_ObjectHideFlags: 0

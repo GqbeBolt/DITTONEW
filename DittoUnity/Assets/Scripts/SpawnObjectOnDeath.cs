@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnObjectOnDeath : MonoBehaviour
 {
@@ -12,6 +13,19 @@ public class SpawnObjectOnDeath : MonoBehaviour
     void OnApplicationQuit()
     {
         isQuitting = true;
+    }
+
+    private void ChangedActiveScene(Scene current, Scene next)
+    {
+        string currentName = current.name;
+
+        if (next.name == "Main Menu")
+        {
+            // Scene1 has been removed
+            isQuitting = true;
+        }
+
+        Debug.Log("Scenes: " + currentName + ", " + next.name);
     }
 
     public void OnDestroy(){
