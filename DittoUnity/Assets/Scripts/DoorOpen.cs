@@ -4,20 +4,24 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class DoorOpen : MonoBehaviour
 {
-    public bool open;
+    public bool open, playerNear;
     private SpriteRenderer sr;
 
     [SerializeField] Sprite openSprite;
     [SerializeField] string nextScene;
-    // Update is called once per frame
+    private GameObject player;
+    private TMP_Text text; 
 
     void Start()
     {
         open = false;
         sr = GetComponent<SpriteRenderer>();
+        player = GameObject.Find("Player");
+        text = player.GetComponentInChildren<TMP_Text>();
     }
     void FixedUpdate()
     {
@@ -26,13 +30,30 @@ public class DoorOpen : MonoBehaviour
             open = true;
             sr.sprite = openSprite;
         }
-    }
-
-    public void OnTriggerStay2D(Collider2D other)
-    {
-        if (open && other.gameObject.CompareTag("Player") && Input.GetKey(KeyCode.W))
+        if (open && playerNear && Input.GetKey(KeyCode.W))
         {
             SceneManager.LoadScene(nextScene);
         }
     }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player") && open)
+        {
+            playerNear = true;
+            text.text = "Press <W> to enter door";
+        }
+        
+    }
+
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player") && open)
+        {
+            playerNear = false;
+            text.text = "";
+        }
+    }
+
+   
 }

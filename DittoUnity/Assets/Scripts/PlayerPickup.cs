@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using Unity.Mathematics;
 using UnityEngine;
+using TMPro;
 
 public class PlayerPickup : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerPickup : MonoBehaviour
    public Transform dropPos;
     private PlayerHealth healthController;
     public GameObject[] weapons;
+    [SerializeField] private TMP_Text text;
 
     private void Start()
     {
@@ -73,6 +75,7 @@ public class PlayerPickup : MonoBehaviour
       if (other.CompareTag("FloorItem"))
       {
          itemInReach = other.gameObject;
+         text.text = "Press <E> to pickup weapon.";
       } else if (other.CompareTag("HealthPack"))
        {
             healthController.Heal(1);
@@ -85,6 +88,7 @@ public class PlayerPickup : MonoBehaviour
       if (other.gameObject == itemInReach)
       {
          itemInReach = null;
+            text.text = "";
       }
    }
 
