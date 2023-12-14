@@ -7,8 +7,13 @@ public class Playgame : MonoBehaviour
     public void loadLevel(string levelName)
     {
         // Takes in a string level name and uses it to load that level
+        SceneManager.LoadScene(levelName);
+    }
+
+    public void RestartGame()
+    {
         PlayerPrefs.SetFloat("PlayerHealth", 10);
         PlayerPrefs.SetFloat("PlayerHolding", 0);
-        SceneManager.LoadScene(levelName);
+        SceneManager.LoadScene("Tutorial");
     }
 }
