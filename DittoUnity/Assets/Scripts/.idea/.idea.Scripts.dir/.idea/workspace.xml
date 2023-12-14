@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f24ceda7-1aee-4ca7-a3f1-dd976a3c046c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Scenes/LevelS/Tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/LevelS/Tutorial.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player Varient/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Player Varient/PlayerHealth.cs" afterDir="false" />
-    </list>
+    <list default="true" id="f24ceda7-1aee-4ca7-a3f1-dd976a3c046c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701454341976</updated>
       <workItem from="1701454358354" duration="1000" />
-      <workItem from="1702573517839" duration="1893000" />
+      <workItem from="1702573517839" duration="2268000" />
     </task>
     <servers />
   </component>
