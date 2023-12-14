@@ -19,6 +19,12 @@ public class PlayerPickup : MonoBehaviour
     private void Start()
     {
         healthController = transform.parent.GetComponent<PlayerHealth>();
+        GameObject heldItem = GameObject.FindWithTag("Held Item");
+        if (heldItem)
+        {
+           return;
+        } //if you have a held item drop it}
+
         GameObject newHeldItem = Instantiate(weapons[PlayerPrefs.GetInt("PlayerHolding")], transform.parent.GetChild(0));
         
     }
