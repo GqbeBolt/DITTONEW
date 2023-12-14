@@ -56,13 +56,13 @@ public class PlayerPickup : MonoBehaviour
       switch (newHeldItem.name)
       {
          case "PlayerBow(Clone)":
-            PlayerPrefs.SetInt("PlayerHolding", 0);
-            break;
-         case "Player Staff(Clone)":
             PlayerPrefs.SetInt("PlayerHolding", 1);
             break;
-         case "PlayerSword(Clone)":
+         case "Player Staff(Clone)":
             PlayerPrefs.SetInt("PlayerHolding", 2);
+            break;
+         case "PlayerSword(Clone)":
+            PlayerPrefs.SetInt("PlayerHolding", 3);
             break;
       }
 
@@ -75,7 +75,7 @@ public class PlayerPickup : MonoBehaviour
       if (other.CompareTag("FloorItem"))
       {
          itemInReach = other.gameObject;
-         text.text = "Press <E> to pickup weapon.";
+         text.text = "<E to Pickup>";
       } else if (other.CompareTag("HealthPack"))
        {
             healthController.Heal(1);
@@ -102,8 +102,9 @@ public class PlayerPickup : MonoBehaviour
 
       HeldItemInformation heldItemInfoScript = heldItem.GetComponent<HeldItemInformation>();
       GameObject droppedItem = Instantiate(heldItemInfoScript.droppedVarient,dropPos.position,transform.rotation);
-      droppedItem.GetComponent<Rigidbody2D>().velocity = transform.right;
+      droppedItem.GetComponent<Rigidbody2D>().velocity = transform.right*3;
       droppedItem.GetComponent<DroppedItemInformation>().information = heldItemInfoScript.information;
       Destroy(heldItem);
+      PlayerPrefs.SetInt("PlayerHolding", 0);
    }
 }
