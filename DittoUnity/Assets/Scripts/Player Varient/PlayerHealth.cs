@@ -25,9 +25,10 @@ public class PlayerHealth : MonoBehaviour
     public void Start()
     {
         touchingHazard = false;
-        health = maxHealth;
+        health = PlayerPrefs.GetFloat("PlayerHealth");
         currentSceneName = SceneManager.GetActiveScene().name;
         pickUpCollider = pickUpRange.GetComponent<Collider2D>();
+        healthBar.fillAmount = health / maxHealth;
     }
 
     public void FixedUpdate()
@@ -81,6 +82,7 @@ public class PlayerHealth : MonoBehaviour
     public void Damage(int amount)
     {
         health -= amount;
+        PlayerPrefs.SetFloat("PlayerHealth", health);
     }
 
     public void Heal(int amount)
@@ -89,6 +91,8 @@ public class PlayerHealth : MonoBehaviour
         if (health > maxHealth)
         {
             health = maxHealth;
+            
         }
+        PlayerPrefs.SetFloat("PlayerHealth", health);
     }
 }
