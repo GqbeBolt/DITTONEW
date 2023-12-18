@@ -142,5 +142,8 @@ public class PlayerPickup : MonoBehaviour
       droppedItem.GetComponent<DroppedItemInformation>().information = heldItemInfoScript.information;
       Destroy(heldItem);
       PlayerPrefs.SetInt("PlayerHolding", 0);
+      moveController.changeJumpHeight(15f);
+      moveController.changeJumpAmount(2);
+      moveController.changeSpeed(12f);
    }
 }
