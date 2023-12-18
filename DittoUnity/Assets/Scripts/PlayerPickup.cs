@@ -15,6 +15,7 @@ public class PlayerPickup : MonoBehaviour
     private PlayerHealth healthController;
     public GameObject[] weapons;
     [SerializeField] private TMP_Text text;
+    private MoveController moveController;
 
     private void Start()
     {
@@ -26,6 +27,26 @@ public class PlayerPickup : MonoBehaviour
         } //if you have a held item drop it}
 
         GameObject newHeldItem = Instantiate(weapons[PlayerPrefs.GetInt("PlayerHolding")], transform.parent.GetChild(0));
+        moveController = GetComponentInParent<MoveController>();
+        switch (newHeldItem.name)
+        {
+            case "PlayerBow(Clone)":
+                moveController.changeJumpHeight(25f);
+                moveController.changeJumpAmount(2);
+                moveController.changeSpeed(10f);
+                break;
+            case "Player Staff(Clone)":
+                moveController.changeJumpHeight(15f);
+                moveController.changeJumpAmount(3);
+                moveController.changeSpeed(10f);
+                break;
+            case "PlayerSword(Clone)":
+                moveController.changeJumpHeight(15f);
+                moveController.changeJumpAmount(2);
+                moveController.changeSpeed(16f);
+                break;
+        }
+
         
     }
     public void Update()
@@ -63,12 +84,21 @@ public class PlayerPickup : MonoBehaviour
       {
          case "PlayerBow(Clone)":
             PlayerPrefs.SetInt("PlayerHolding", 1);
+            moveController.changeJumpHeight(25f);
+            moveController.changeJumpAmount(2);
+            moveController.changeSpeed(10f);
             break;
          case "Player Staff(Clone)":
             PlayerPrefs.SetInt("PlayerHolding", 2);
+            moveController.changeJumpHeight(15f);
+            moveController.changeJumpAmount(3);
+            moveController.changeSpeed(10f);
             break;
          case "PlayerSword(Clone)":
             PlayerPrefs.SetInt("PlayerHolding", 3);
+            moveController.changeJumpHeight(15f);
+            moveController.changeJumpAmount(2);
+            moveController.changeSpeed(16f);
             break;
       }
 

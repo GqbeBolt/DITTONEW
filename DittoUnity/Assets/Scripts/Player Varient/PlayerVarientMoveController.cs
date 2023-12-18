@@ -26,4 +26,5 @@ public class PlayerVarientMoveController : MonoBehaviour
             _moveController.RequestSlowdown();
         }
     }
+
 }

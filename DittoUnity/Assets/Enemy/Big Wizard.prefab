@@ -26,7 +26,7 @@ PrefabInstance:
     - target: {fileID: 6311878937576372507, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 98026f0efddde4141b022b7d2737101b, type: 3}
+      objectReference: {fileID: 21300000, guid: aa3e0b950090fd842b981f9d4ef0ebb2, type: 3}
     - target: {fileID: 6376584176424304487, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
       propertyPath: m_Size.x
       value: 1.1386659
@@ -77,7 +77,7 @@ PrefabInstance:
       objectReference: {fileID: 6043183239440762566}
     - target: {fileID: 7209124428371569395, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
       propertyPath: m_Name
-      value: Archer
+      value: Big Wizard
       objectReference: {fileID: 0}
     - target: {fileID: 7209124428371569396, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
       propertyPath: m_Size.x
@@ -106,6 +106,14 @@ PrefabInstance:
     - target: {fileID: 7209124428371569397, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209124428371569397, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209124428371569397, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7209124428371569397, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -154,6 +162,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6005686367168412629, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
   m_PrefabInstance: {fileID: 37656955368291603}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7245795602844424160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7209124428371569395, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
+  m_PrefabInstance: {fileID: 37656955368291603}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &451755600363731406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7245795602844424160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6155879a43a8f594b875a83f814e4b25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticle: {fileID: 6326270781554350600, guid: 0558215699777e54dbddccef5c102273, type: 3}
+  chance: 100
 --- !u!4 &7245795602844424166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7209124428371569397, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
@@ -167,14 +194,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 7245795602844424166}
     m_Modifications:
     - target: {fileID: 260343569, guid: f06dbb7ab7a43824f876932d562f8f2e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 260343569, guid: f06dbb7ab7a43824f876932d562f8f2e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 260343569, guid: f06dbb7ab7a43824f876932d562f8f2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.01
       objectReference: {fileID: 0}
@@ -182,10 +201,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.21
       objectReference: {fileID: 0}
-    - target: {fileID: 260343570, guid: f06dbb7ab7a43824f876932d562f8f2e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1826975220, guid: 44815c1de05b4764e866c7cf8925660b, type: 3}
     - target: {fileID: 260343570, guid: f06dbb7ab7a43824f876932d562f8f2e, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -240,15 +255,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067149128013783355, guid: f06dbb7ab7a43824f876932d562f8f2e, type: 3}
       propertyPath: cooldown
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 6067149128013783355, guid: f06dbb7ab7a43824f876932d562f8f2e, type: 3}
-      propertyPath: projectile
-      value: 
-      objectReference: {fileID: 5116045146121300871, guid: 47ab2865e82df8e43a37d76ccbeafac5, type: 3}
-    - target: {fileID: 6067149128013783355, guid: f06dbb7ab7a43824f876932d562f8f2e, type: 3}
       propertyPath: additionalSpeed
-      value: 22
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6067149128013783356, guid: f06dbb7ab7a43824f876932d562f8f2e, type: 3}
       propertyPath: m_LocalPosition.x

@@ -152,4 +152,19 @@ public class MoveController : MonoBehaviour
     {
         _requestedSlowdown = true;
     }
+
+    public void changeJumpHeight(float power)
+    {
+        jumpPower = power;
+    }
+
+    public void changeSpeed(float speed)
+    {
+        this.speed = speed;
+    }
+
+    public void changeJumpAmount(int jumpAmount)
+    {
+        jumpNumber = jumpAmount;
+    }
 }
