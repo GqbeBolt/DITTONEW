@@ -12,8 +12,25 @@ public class Playgame : MonoBehaviour
 
     public void RestartGame()
     {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+        for(int i = 0; i < enemies.Length; i++){
+            Destroy(enemies[i]);
+        }
         PlayerPrefs.SetFloat("PlayerHealth", 10);
         PlayerPrefs.SetFloat("PlayerHolding", 0);
-        SceneManager.LoadScene("Tutorial");
+        Debug.Log("ResetPlayerPrefs");
+        SceneManager.LoadScene(PlayerPrefs.GetString("PlayerCheckpoint"));
+    }
+    public void StartNewGame()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+        for(int i = 0; i < enemies.Length; i++){
+            Destroy(enemies[i]);
+        }
+        PlayerPrefs.SetFloat("PlayerHealth", 10);
+        PlayerPrefs.SetFloat("PlayerHolding", 0);
+        PlayerPrefs.SetString("PlayerCheckpoint", "Default 1");
+        Debug.Log("ResetPlayerPrefs");
+        SceneManager.LoadScene("Default 1");
     }
 }
