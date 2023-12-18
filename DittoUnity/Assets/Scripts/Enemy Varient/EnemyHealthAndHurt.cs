@@ -42,6 +42,10 @@ public class EnemyHealthAndHurt : MonoBehaviour
             {
                 Damage(3f);
             }
+            else if (other.gameObject.name == "PlayerSlash(Clone)")
+            {
+                Damage(2f);
+            }
             else
             {
                 Damage(1f);

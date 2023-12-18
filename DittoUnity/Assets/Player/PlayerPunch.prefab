@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd520a65ca27814db87c55ab19e1188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 5116045146121300871, guid: 4cc8ea95565377444a975b4c267f7dea, type: 3}
+  projectile: {fileID: 5116045146121300871, guid: de9cba21342caec4b8a27eca8292c567, type: 3}
   additionalSpeed: 0
   cooldown: 0.25
 --- !u!114 &2190708580442115740
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 1661650796173429942}
   - component: {fileID: 5024926598717328021}
   m_Layer: 0
-  m_Name: PlayerSword
+  m_Name: PlayerPunch
   m_TagString: Held Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,7 +199,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 177330603, guid: 8cec34c287818814297e321270043191, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
