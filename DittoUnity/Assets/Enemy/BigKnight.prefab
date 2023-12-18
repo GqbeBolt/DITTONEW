@@ -162,6 +162,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6005686367168412629, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
   m_PrefabInstance: {fileID: 37656955368291603}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7245795602844424160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7209124428371569395, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
+  m_PrefabInstance: {fileID: 37656955368291603}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &410146065748324200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7245795602844424160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6155879a43a8f594b875a83f814e4b25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticle: {fileID: 6326270781554350600, guid: 4736334d56672d14f89d49240af83446, type: 3}
+  chance: 100
 --- !u!4 &7245795602844424166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7209124428371569397, guid: ad119dc787fb09b4b8c6f9b24fc4e98e, type: 3}
