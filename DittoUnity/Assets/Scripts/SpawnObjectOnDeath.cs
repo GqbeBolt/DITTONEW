@@ -15,7 +15,7 @@ public class SpawnObjectOnDeath : MonoBehaviour
         isQuitting = true;
     }
 
-    private void ChangedActiveScene(Scene current, Scene next)
+    private void OnChangedActiveScene(Scene current, Scene next)
     {
         string currentName = current.name;
 
@@ -27,6 +27,7 @@ public class SpawnObjectOnDeath : MonoBehaviour
 
         Debug.Log("Scenes: " + currentName + ", " + next.name);
     }
+    
 
     public void OnDestroy(){
         
