@@ -31,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
         currentSceneName = SceneManager.GetActiveScene().name;
         pickUpCollider = pickUpRange.GetComponent<Collider2D>();
         healthBar.fillAmount = health / maxHealth;
+        Debug.Log("Loaded player, player health is: " + PlayerPrefs.GetFloat("PlayerHealth"));
     }
 
     public void FixedUpdate()
@@ -83,7 +84,7 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             Instantiate(deathScreen);
-            
+            PlayerPrefs.SetFloat("PlayerHealth", 10);
             health = 1000;
         }
     }
