@@ -183,7 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6941f8a1705f7454ca5d84c7e314dcb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteChildAnim: {fileID: 0}
   faceOtherDirection: 0
   groundLayer:
     serializedVersion: 2
@@ -206,6 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dded409acf07a8409c2ab09a522d8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteChildAnim: {fileID: 3925608521310649961}
 --- !u!61 &3925608521695107544
 BoxCollider2D:
   m_ObjectHideFlags: 0
