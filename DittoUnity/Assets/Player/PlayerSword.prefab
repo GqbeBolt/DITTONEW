@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 5116045146121300871, guid: 4cc8ea95565377444a975b4c267f7dea, type: 3}
-  additionalSpeed: 0
+  additionalSpeed: 15
   cooldown: 0.25
 --- !u!114 &2190708580442115740
 MonoBehaviour:
