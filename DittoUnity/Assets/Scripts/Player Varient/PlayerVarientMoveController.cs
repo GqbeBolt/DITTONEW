@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerVarientMoveController : MonoBehaviour
 {
     private MoveController _moveController;
+    public Animator spriteChildAnim;
 
     public void Start()
     {
@@ -27,4 +28,9 @@ public class PlayerVarientMoveController : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        spriteChildAnim.SetFloat("Speed", Mathf.Abs(_moveController.getXVel()));
+        spriteChildAnim.SetFloat("YVel", _moveController.getYVel());
+    }
 }

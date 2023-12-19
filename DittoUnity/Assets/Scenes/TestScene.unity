@@ -1566,10 +1566,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 815847216, guid: fa371b10d24f46c4487d57cf979abee9, type: 3}
-      propertyPath: weapons.Array.data[0]
-      value: 
-      objectReference: {fileID: 2230957341813629462, guid: 416ab52d967a7b247aaf2c8a521dc4b1, type: 3}
     - target: {fileID: 3925608521695107492, guid: fa371b10d24f46c4487d57cf979abee9, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1614,6 +1610,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3925608521695107494, guid: fa371b10d24f46c4487d57cf979abee9, type: 3}
+      propertyPath: spriteChildAnim
+      value: 
+      objectReference: {fileID: 3925608521310649961}
     - target: {fileID: 3925608521695107546, guid: fa371b10d24f46c4487d57cf979abee9, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1624,6 +1624,11 @@ PrefabInstance:
       objectReference: {fileID: 367599642}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa371b10d24f46c4487d57cf979abee9, type: 3}
+--- !u!95 &3925608521310649961 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3925608521310649961, guid: fa371b10d24f46c4487d57cf979abee9, type: 3}
+  m_PrefabInstance: {fileID: 3925608521310649958}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5705020733947587859
 PrefabInstance:
   m_ObjectHideFlags: 0
