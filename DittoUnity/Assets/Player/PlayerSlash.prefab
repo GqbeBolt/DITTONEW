@@ -102,7 +102,7 @@ MonoBehaviour:
   breakTags:
   - enemy
   stickOnHit: 0
-  despawnTime: 0.25
+  despawnTime: 0.1
   rotateWithGravity: 0
 --- !u!50 &4100408564924704468
 Rigidbody2D:
@@ -140,4 +140,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.9763463
