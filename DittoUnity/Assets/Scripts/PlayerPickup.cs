@@ -70,9 +70,15 @@ public class PlayerPickup : MonoBehaviour
          return false;
       }
 
-      if (heldItem)//if you have a held item drop it
+
+      if (heldItem)
       {
-         DropItem();
+         DropItem(true);
+      }   
+      heldItem = GameObject.FindWithTag("Held Item");
+      if (heldItem && heldItem.name == "PlayerPunch(Clone)")//if you have a held item drop it
+      {
+         Destroy(heldItem);
       }
 
       DroppedItemInformation droppedItemInfoScript = itemInReach.GetComponent<DroppedItemInformation>();
@@ -113,10 +119,10 @@ public class PlayerPickup : MonoBehaviour
          itemInReach = other.gameObject;
          text.text = "<E to Pickup>";
       } else if (other.CompareTag("HealthPack"))
-       {
-            healthController.Heal(1);
-            Destroy(other.gameObject);
-       }
+      {
+         healthController.Heal(1);
+         Destroy(other.gameObject);
+      }
    }
 
    public void OnTriggerExit2D(Collider2D other)
@@ -131,7 +137,26 @@ public class PlayerPickup : MonoBehaviour
    public void DropItem()
    {
       GameObject heldItem = GameObject.FindWithTag("Held Item");
-      if (!heldItem)
+      if (!heldItem || heldItem.name == "PlayerPunch(Clone)")
+      {
+         return;
+      }
+
+      HeldItemInformation heldItemInfoScript = heldItem.GetComponent<HeldItemInformation>();
+      GameObject droppedItem = Instantiate(heldItemInfoScript.droppedVarient,dropPos.position,transform.rotation);
+      droppedItem.GetComponent<Rigidbody2D>().velocity = transform.right*3;
+      droppedItem.GetComponent<DroppedItemInformation>().information = heldItemInfoScript.information;
+      Destroy(heldItem);
+      PlayerPrefs.SetInt("PlayerHolding", 0);
+      Instantiate(weapons[0], transform.parent.GetChild(0));
+      moveController.changeJumpHeight(15f);
+      moveController.changeJumpAmount(2);
+      moveController.changeSpeed(12f);
+   }
+   public void DropItem(bool idk)
+   {
+      GameObject heldItem = GameObject.FindWithTag("Held Item");
+      if (!heldItem || heldItem.name == "PlayerPunch(Clone)")
       {
          return;
       }
