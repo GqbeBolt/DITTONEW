@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MoveController : MonoBehaviour
 {
-    public Animator spriteChildAnim;
+
     private Rigidbody2D _rb;
     
     private Vector2 _currentInput;
@@ -34,31 +34,8 @@ public class MoveController : MonoBehaviour
     {
         //set movement
         _rb.velocity = new Vector2(_currentInput.x * speed, _rb.velocity.y); //dont change y velocity
-        spriteChildAnim.SetFloat("Speed", Mathf.Abs(_rb.velocity.x));
-        spriteChildAnim.SetFloat("YVel", _rb.velocity.y);
-        /*
-        if (_requestedJump && (IsGrounded() || _jumpCounter > 0))
-        {
-            if (IsGrounded())
-            {
-                //if you jump from the ground set jump back to normal;
-                _jumpCounter = jumpNumber - 1;
-            }
-            else // if not grounded just reduce jump counter
-            {
-                _jumpCounter--;
-            }
 
-
-            _rb.velocity *= Vector2.right;
-            _rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-            _requestedJump = false;
-        }
-        else if (_requestedJump)
-        {
-            _requestedJump = false;
-        }
-        */
+       
         onGround = IsGrounded();
 
         if (onGround)
@@ -98,6 +75,7 @@ public class MoveController : MonoBehaviour
         {
             _requestedSlowdown = false;
         }
+        
         //flipping sprite
         if (_rb.velocity.x > 0.1)
         {
@@ -153,6 +131,16 @@ public class MoveController : MonoBehaviour
     public void RequestSlowdown()
     {
         _requestedSlowdown = true;
+    }
+
+    public float getXVel()
+    {
+        return _rb.velocity.x;
+    }
+
+    public float getYVel()
+    {
+        return _rb.velocity.y;
     }
 
     public void changeJumpHeight(float power)
