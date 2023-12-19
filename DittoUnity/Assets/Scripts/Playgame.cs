@@ -10,7 +10,7 @@ public class Playgame : MonoBehaviour
         SceneManager.LoadScene(levelName);
     }
 
-    public void RestartGame()
+    public void RestartGame()//from checkpoint
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
         for(int i = 0; i < enemies.Length; i++){
