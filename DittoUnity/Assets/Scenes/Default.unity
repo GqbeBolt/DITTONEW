@@ -2196,6 +2196,10 @@ PrefabInstance:
       propertyPath: cooldown
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8464134173869839416, guid: fa371b10d24f46c4487d57cf979abee9, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1615887194}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa371b10d24f46c4487d57cf979abee9, type: 3}
 --- !u!4 &2061420920 stripped
