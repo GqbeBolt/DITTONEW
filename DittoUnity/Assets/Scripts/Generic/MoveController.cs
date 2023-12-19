@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MoveController : MonoBehaviour
 {
-    
+    public Animator spriteChildAnim;
     private Rigidbody2D _rb;
     
     private Vector2 _currentInput;
@@ -34,6 +34,8 @@ public class MoveController : MonoBehaviour
     {
         //set movement
         _rb.velocity = new Vector2(_currentInput.x * speed, _rb.velocity.y); //dont change y velocity
+        spriteChildAnim.SetFloat("Speed", Mathf.Abs(_rb.velocity.x));
+        spriteChildAnim.SetFloat("YVel", _rb.velocity.y);
         /*
         if (_requestedJump && (IsGrounded() || _jumpCounter > 0))
         {
