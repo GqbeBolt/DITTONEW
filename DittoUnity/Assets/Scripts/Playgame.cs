@@ -7,6 +7,10 @@ public class Playgame : MonoBehaviour
     public void loadLevel(string levelName)
     {
         // Takes in a string level name and uses it to load that level
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+        for(int i = 0; i < enemies.Length; i++){
+            Destroy(enemies[i]);
+        }
         SceneManager.LoadScene(levelName);
     }
 
@@ -18,7 +22,6 @@ public class Playgame : MonoBehaviour
         }
         PlayerPrefs.SetFloat("PlayerHealth", 10);
         PlayerPrefs.SetFloat("PlayerHolding", 0);
-        Debug.Log("ResetPlayerPrefs");
         SceneManager.LoadScene(PlayerPrefs.GetString("PlayerCheckpoint"));
     }
     public void StartNewGame()
@@ -30,7 +33,6 @@ public class Playgame : MonoBehaviour
         PlayerPrefs.SetFloat("PlayerHealth", 10);
         PlayerPrefs.SetFloat("PlayerHolding", 0);
         PlayerPrefs.SetString("PlayerCheckpoint", "Default 1");
-        Debug.Log("ResetPlayerPrefs");
         SceneManager.LoadScene("Default 1");
     }
 }
