@@ -26,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Start()
     {
+        healthBar = GameObject.Find("Health").GetComponent<Image>();
         touchingHazard = false;
         health = PlayerPrefs.GetFloat("PlayerHealth");
         currentSceneName = SceneManager.GetActiveScene().name;
