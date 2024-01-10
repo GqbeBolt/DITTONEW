@@ -48,7 +48,6 @@ public class ProjectileGeneric : MonoBehaviour
                 else
                 {
                     Destroy(gameObject);
-                    Debug.Log("destroy");
                 }
             }
         }
