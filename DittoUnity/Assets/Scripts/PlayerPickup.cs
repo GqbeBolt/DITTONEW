@@ -120,7 +120,7 @@ public class PlayerPickup : MonoBehaviour
          text.text = "<E to Pickup>";
       } else if (other.CompareTag("HealthPack"))
       {
-         healthController.Heal(1);
+         healthController.Heal(2);
          Destroy(other.gameObject);
       }
    }
