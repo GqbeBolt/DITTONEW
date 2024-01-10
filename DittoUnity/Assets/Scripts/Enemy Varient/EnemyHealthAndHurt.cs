@@ -50,7 +50,6 @@ public class EnemyHealthAndHurt : MonoBehaviour
             {
                 Damage(1f);
             }
-            Debug.Log(other.gameObject.name);
         }
     }
 
