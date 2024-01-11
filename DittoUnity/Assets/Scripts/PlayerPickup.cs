@@ -5,20 +5,29 @@ using System.Security.Cryptography;
 using Unity.Mathematics;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlayerPickup : MonoBehaviour
 {
 
 
-   public GameObject itemInReach;
-   public Transform dropPos;
+    public GameObject itemInReach;
+    public Transform dropPos;
     private PlayerHealth healthController;
     public GameObject[] weapons;
     [SerializeField] private TMP_Text text;
     private MoveController moveController;
+    private Transform swordCard;
+    private Transform wandCard;
+    private Transform bowCard;
 
     private void Start()
     {
+
+       swordCard = GameObject.Find("SwordCard").transform;
+       wandCard = GameObject.Find("WandCard").transform;
+       bowCard = GameObject.Find("BowCard").transform;
+       
         healthController = transform.parent.GetComponent<PlayerHealth>();
         GameObject heldItem = GameObject.FindWithTag("Held Item");
         if (heldItem)
@@ -93,18 +102,27 @@ public class PlayerPickup : MonoBehaviour
             moveController.changeJumpHeight(25f);
             moveController.changeJumpAmount(2);
             moveController.changeSpeed(10f);
+            swordCard.localPosition = new Vector3(187.3f, -255f, 0f);
+            wandCard.localPosition = new Vector3(278.1f, -255f, 0f);
+            bowCard.localPosition = new Vector3(354.9f, -187f, 0f);
             break;
          case "Player Staff(Clone)":
             PlayerPrefs.SetInt("PlayerHolding", 2);
             moveController.changeJumpHeight(15f);
             moveController.changeJumpAmount(3);
             moveController.changeSpeed(10f);
+            swordCard.localPosition = new Vector3(187.3f, -255f, 0f);
+            wandCard.localPosition = new Vector3(264.2f, -187f, 0f);
+            bowCard.localPosition = new Vector3(368.7f, -255f, 0f);
             break;
          case "PlayerSword(Clone)":
             PlayerPrefs.SetInt("PlayerHolding", 3);
             moveController.changeJumpHeight(15f);
             moveController.changeJumpAmount(2);
             moveController.changeSpeed(16f);
+            swordCard.localPosition = new Vector3(173.5f, -187f, 0f);
+            wandCard.localPosition = new Vector3(278.1f, -255f, 0f);
+            bowCard.localPosition = new Vector3(368.7f, -255f, 0f);
             break;
       }
 
@@ -152,6 +170,9 @@ public class PlayerPickup : MonoBehaviour
       moveController.changeJumpHeight(15f);
       moveController.changeJumpAmount(2);
       moveController.changeSpeed(12f);
+      swordCard.localPosition = new Vector3(187.3f, -255f, 0f);
+      wandCard.localPosition = new Vector3(278.1f, -255f, 0f);
+      bowCard.localPosition = new Vector3(368.7f, -255f, 0f);
    }
    public void DropItem(bool idk)
    {
