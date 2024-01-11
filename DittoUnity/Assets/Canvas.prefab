@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 30203610}
   - component: {fileID: 30203609}
   m_Layer: 5
-  m_Name: Cards (1)
+  m_Name: WandCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 1323701860}
   - component: {fileID: 1323701859}
   m_Layer: 5
-  m_Name: Cards (2)
+  m_Name: BowCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 1885374628}
   - component: {fileID: 1885374630}
   m_Layer: 5
-  m_Name: Cards
+  m_Name: SwordCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

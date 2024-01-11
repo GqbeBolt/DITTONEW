@@ -17,9 +17,7 @@ public class PlayerPickup : MonoBehaviour
     public GameObject[] weapons;
     [SerializeField] private TMP_Text text;
     private MoveController moveController;
-    private Transform swordCard;
-    private Transform wandCard;
-    private Transform bowCard;
+    private Transform swordCard, bowCard, wandCard;
 
     private void Start()
     {
@@ -43,16 +41,25 @@ public class PlayerPickup : MonoBehaviour
                 moveController.changeJumpHeight(25f);
                 moveController.changeJumpAmount(2);
                 moveController.changeSpeed(10f);
+                swordCard.localPosition = new Vector3(187.3f, -255f, 0f);
+               wandCard.localPosition = new Vector3(278.1f, -255f, 0f);
+               bowCard.localPosition = new Vector3(354.9f, -187f, 0f);
                 break;
             case "Player Staff(Clone)":
                 moveController.changeJumpHeight(15f);
                 moveController.changeJumpAmount(3);
                 moveController.changeSpeed(10f);
+                swordCard.localPosition = new Vector3(187.3f, -255f, 0f);
+               wandCard.localPosition = new Vector3(264.2f, -187f, 0f);
+               bowCard.localPosition = new Vector3(368.7f, -255f, 0f);
                 break;
             case "PlayerSword(Clone)":
                 moveController.changeJumpHeight(15f);
                 moveController.changeJumpAmount(2);
                 moveController.changeSpeed(16f);
+                swordCard.localPosition = new Vector3(173.5f, -187f, 0f);
+               wandCard.localPosition = new Vector3(278.1f, -255f, 0f);
+               bowCard.localPosition = new Vector3(368.7f, -255f, 0f);
                 break;
         }
 
