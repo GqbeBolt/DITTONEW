@@ -11,6 +11,7 @@ public class CheckpointScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerPrefs.SetString("PlayerCheckpoint", SceneManager.GetActiveScene().name);
+            PlayerPrefs.SetFloat("CheckpointWeapon", PlayerPrefs.GetFloat("PlayerHolding"));
         }
     }
 }

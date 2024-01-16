@@ -22,6 +22,11 @@ public class Playgame : MonoBehaviour
         }
         PlayerPrefs.SetFloat("PlayerHealth", 10);
         PlayerPrefs.SetFloat("PlayerHolding", 0);
+        if (PlayerPrefs.GetFloat("CheckpointWeapon") != 0)
+        {
+            PlayerPrefs.SetFloat("PlayerHolding", PlayerPrefs.GetFloat("CheckpointWeapon"));
+        }
+
         SceneManager.LoadScene(PlayerPrefs.GetString("PlayerCheckpoint"));
     }
     public void StartNewGame()
