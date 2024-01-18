@@ -161,7 +161,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1748449105, guid: cc670c743408b514d9ff3f65c58863b0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -212,4 +212,4 @@ MonoBehaviour:
   open: 0
   playerNear: 0
   openSprite: {fileID: -1299111804, guid: cc670c743408b514d9ff3f65c58863b0, type: 3}
-  nextScene: Level3
+  nextScene: Level2
