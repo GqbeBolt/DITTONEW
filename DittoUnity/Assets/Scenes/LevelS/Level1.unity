@@ -1508,7 +1508,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 21
-      m_TileSpriteIndex: 14
+      m_TileSpriteIndex: 25
       m_TileMatrixIndex: 0
       m_TileColorIndex: 13
       m_TileObjectToInstantiateIndex: 65535
@@ -33471,8 +33471,8 @@ Tilemap:
     m_Data: {fileID: -1426474498, guid: fdc04e964bd0d664182e0df24bb96fd0, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 46173352, guid: fdc04e964bd0d664182e0df24bb96fd0, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0
@@ -33493,8 +33493,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 902134017, guid: cc985edef12bd2448bfdc00c1ed7e8ef, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 46173352, guid: fdc04e964bd0d664182e0df24bb96fd0, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 3189
     m_Data:
@@ -34646,10 +34646,6 @@ PrefabInstance:
     - target: {fileID: 305880738815446369, guid: be46b3701b22ff9419727d35249c27be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 305880738815446370, guid: be46b3701b22ff9419727d35249c27be, type: 3}
-      propertyPath: nextScene
-      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 305880738815446382, guid: be46b3701b22ff9419727d35249c27be, type: 3}
       propertyPath: m_Name
