@@ -216,6 +216,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3529931700545267336, guid: 71b95146e3d21a04980e13da35caf070, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6117647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529931700545267336, guid: 71b95146e3d21a04980e13da35caf070, type: 3}
+      propertyPath: m_Color.g
+      value: 0.85098046
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529931700545267336, guid: 71b95146e3d21a04980e13da35caf070, type: 3}
+      propertyPath: m_Color.r
+      value: 0.20784315
+      objectReference: {fileID: 0}
     - target: {fileID: 3828047917160329408, guid: 71b95146e3d21a04980e13da35caf070, type: 3}
       propertyPath: m_Name
       value: fireball effect (1)
