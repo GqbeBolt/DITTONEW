@@ -12,7 +12,6 @@ public class PlayerHealth : MonoBehaviour
     public Image healthBar;
     public float maxHealth;
     public float health;
-    private Animator _animator;
     private string currentSceneName;
     
     public float cooldown;
@@ -24,9 +23,12 @@ public class PlayerHealth : MonoBehaviour
     public GameObject deathScreen;
     public GameObject canvasForDeath;
 
+    [SerializeField] private Animator vignette;
+
     public void Start()
     {
         healthBar = GameObject.Find("Health").GetComponent<Image>();
+        vignette = GameObject.Find("Vignette").GetComponent<Animator>();
         touchingHazard = false;
         health = PlayerPrefs.GetFloat("PlayerHealth");
         currentSceneName = SceneManager.GetActiveScene().name;
@@ -81,6 +83,7 @@ public class PlayerHealth : MonoBehaviour
     public void Damage(int amount)
     {
         health -= amount;
+        vignette.SetTrigger("Damaged");
         PlayerPrefs.SetFloat("PlayerHealth", health);
         if (health <= 0)
         {
